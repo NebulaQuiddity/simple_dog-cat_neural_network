@@ -335,9 +335,9 @@ def load_dog_and_cat_training_data(x_filename, y_filename, viewing=False, cat_vi
 def interact(cat_viewing_data, dog_viewing_data):
     """
     this function lets you view the dataset images
-    :param cat_viewing_data:
-    :param dog_viewing_data:
-    :return:
+    :param cat_viewing_data: the viewing array in which the cat images are stored in
+    :param dog_viewing_data: the viewing array in which the dog images are stored in
+    :return: nothing, this function is only to view the images in the viewing datasets
     """
     # create a loop for the user to view the images
     active = True
