@@ -1,5 +1,5 @@
 # simple_image_classifier-using_ffnn
-
+ 
 # Version 1: classifying dogs and cats
 A simple, feed-forward neural network that attempts to classify images as either a cat or a dog. 
 # Data
