@@ -1,6 +1,6 @@
-# simple_image_classifier-using_ffnn
+# Simple Image Classifier Using a Feed Forward Neural Network
 A feed forward neural network that aims to classify groups of images.
-# Version 1: classifying MNIST images
+# Version 1: Classifying MNIST Images
 A simple, feed-forward neural network that attempts to classify images as a number between 0 and 9. 
 # Data
 In this example the classic MNIST image data was used, downloaded from this source (as a csv): https://pjreddie.com/projects/mnist-in-csv/
