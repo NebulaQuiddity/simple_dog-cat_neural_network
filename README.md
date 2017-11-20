@@ -1,8 +1,9 @@
-# Simple Image Classifier Using a Feed Forward Neural Network
-A feed forward neural network that aims to classify groups of images.
-# Version 1: Classifying MNIST Images
-A simple, feed-forward neural network that attempts to classify images as a number between 0 and 9. 
-# Data
-In this example the classic MNIST image data was used, downloaded from this source (as a csv): https://pjreddie.com/projects/mnist-in-csv/
-# Creating/Loading the Data
-In order to create the data, you need to import `load_mnist_data` and run `create_mnist_data(arguments)` (view the code for a full description of the arguments). This function will either directly return the arrays or will save them to `.npy` files. To load in the arrays in the files, run `load_data_from_files(arguments)` (this will be quicker to load than running `create_mnist_data()` every time).
+# Learning from the classic MNIST dataset
+This simple neural network attempts to classify MNIST images, as I am aware many, many, many people have already done. However, this project is primarily focused on solidifying my knowledge on feedforward neural networks before I move on to more complex learning models. 
+
+# Benefits
+  - Relatively easy to use
+  - Honestly, that is this project's central benefit. I do not expect it to work faster or more accurately than the neural networks built by experts in the machine learning field, obviously. However, if you are also looking to develop a ffnn from scratch, looking at this project may be instructional. Furthermore, I would highly, HIGHLY, recommend checking out Michael Nielsen's online (and free!) book: http://neuralnetworksanddeeplearning.com.
+  
+# So, how do I use it?
+Well, check out the Wiki! I am doing my best to document everything in an easy to understand way so that even if you are not familiar with machine learning, you should be able to use this.
