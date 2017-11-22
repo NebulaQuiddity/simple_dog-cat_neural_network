@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/29058151/33108998-5f20e9a0-cefc-11e7-9a40-2c9148f7ff6c.png" width=2000/>
+  <img src="https://user-images.githubusercontent.com/29058151/33108998-5f20e9a0-cefc-11e7-9a40-2c9148f7ff6c.png" width=700/>
 </p>
 
 # Learning from the classic MNIST dataset
