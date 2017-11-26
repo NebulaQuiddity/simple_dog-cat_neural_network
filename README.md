@@ -16,7 +16,7 @@ This simple neural network attempts to classify MNIST images, as I am aware many
 # Benefits
   - Relatively easy to use
   - Well documented? I guess you can decide if that's true!
-  - Honestly, that is this project's central benefit. I do not expect it to work faster or more accurately than the neural networks built by experts in the machine learning field, obviously. However, if you are also looking to develop a ffnn from scratch, looking at this project may be instructional. Furthermore, I would highly, HIGHLY, recommend checking out Michael Nielsen's online (and free!) book: http://neuralnetworksanddeeplearning.com.
+  - Honestly, that is this project's central benefit. I do not expect it to work faster or more accurately than the neural networks built by experts in the machine learning field, obviously. However, if you are also looking to develop a ffnn from scratch, looking at this project may be instructional. Furthermore, I would highly, HIGHLY, recommend checking out Michael Nielsen's online (and free!) [book](http://neuralnetworksanddeeplearning.com).
   
 # So, how do I use it? Well, I'm glad you asked...
 
