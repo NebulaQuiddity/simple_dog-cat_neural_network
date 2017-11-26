@@ -19,4 +19,22 @@ This simple neural network attempts to classify MNIST images, as I am aware many
   - Honestly, that is this project's central benefit. I do not expect it to work faster or more accurately than the neural networks built by experts in the machine learning field, obviously. However, if you are also looking to develop a ffnn from scratch, looking at this project may be instructional. Furthermore, I would highly, HIGHLY, recommend checking out Michael Nielsen's online (and free!) [book](http://neuralnetworksanddeeplearning.com).
   
 # So, how do I use it? Well, I'm glad you asked...
+## Creating/loading data
+The MNIST data is not particularly difficult to load, so if you have your own method of doing this, that's completely fine. Just make sure that the labels are formatted as an array of 10 by 1 vectors, not as a single scalar.
 
+Otherwise, I suggest that you download the MNIST data as csv files from [this](https://pjreddie.com/projects/mnist-in-csv/) source. Following your download, you can run this to load the data into .npy files, which can later be loaded in quickly.
+```
+import load_mnist_data as lmnist
+lmnist.create_mnist_data('tr_data.csv', 'te_data.csv', True, 
+                         'trx.npy', 'try.npy', 'tex.npy', 'tey.npy')
+``` 
+This will create 4 .npy files that contain both the training and testing input and output data. In order to load this data, run 
+```
+trx, tr_y, tex, tey = lmnist.load_data_from_files(('trx.npy', 'try.npy','tex.npy', 'tey.npy'))
+```
+### Viewing images
+If you are a bit impatient and want to check out some of the images, you can use 
+```
+lmnist.show_mnist_images([image array])
+```
+to view images in either the training or test set.
