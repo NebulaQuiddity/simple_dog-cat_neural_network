@@ -8,10 +8,6 @@ import cost_functions as cf
 import backprop_algorithms as ba
 from matplotlib import pyplot as plt
 
-# TEMPORARY DEPENDENCIES
-import load_mnist_data as lmnist
-import time
-
 # seed numpy for consistent results
 np.random.seed(29239)
 
@@ -298,14 +294,3 @@ class FeedForwardNeuralNetwork:
                                                                      self.z_activations[layer - 1], (self.epsilon))))
 
         return layer_costs
-
-
-
-
-trx, tr_y, tex, tey = lmnist.load_data_from_files(('ffnn_numpy_data/X_train.npy', 'ffnn_numpy_data/Y_train.npy',
-                                                   'ffnn_numpy_data/X_test.npy', 'ffnn_numpy_data/Y_test.npy'))
-test_neural_network = FeedForwardNeuralNetwork(trx, tr_y, tex, tey, [50, 20, 12, 10])
-#test_neural_network.train(10000, 10000, 0.115, 'lr', 's', 'weights.npy', 'biases.npy', (True, 50), epsilon=0.01)
-test_neural_network.test_network_visually(test_neural_network.input_X)
-correct = test_neural_network.test_network()
-print(str(correct) + "/" + str(test_neural_network.test_output_Y.shape[1]))
