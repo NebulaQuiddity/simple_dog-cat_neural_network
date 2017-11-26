@@ -22,7 +22,7 @@ This simple neural network attempts to classify MNIST images, as I am aware many
 ## Creating/loading data
 The MNIST data is not particularly difficult to load, so if you have your own method of doing this, that's completely fine. Just make sure that the labels are formatted as an array of 10 by 1 vectors, not as a single scalar.
 
-Otherwise, I suggest that you download the MNIST data as csv files from [this](https://pjreddie.com/projects/mnist-in-csv/) source. Following your download, you can run this to load the data into .npy files, which can later be loaded in quickly.
+Otherwise, I suggest that you download the MNIST data as csv files from [this](https://pjreddie.com/projects/mnist-in-csv/) source. Following your download, you can run this to load the data into .npy files, which can later be imported into the project quickly.
 ```
 import load_mnist_data as lmnist
 lmnist.create_mnist_data('tr_data.csv', 'te_data.csv', True, 
