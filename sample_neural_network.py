@@ -15,7 +15,7 @@ network = ffnn.FeedForwardNeuralNetwork(trx, tr_y, tex, tey, ([network shape]))
 # if you have already created a model, you can load in the weights and biases
 # by using line 18. Otherwise, use line 17 to train the network
 network.train(10000, 1, 0, 'lr', 's', 'weights_file_name.npy', 'biases_file_name.npy', (True, 50), epsilon=0.01)
-network.load_weights_and_biases('weights_new.npy', 'biases_new.npy')
+network.load_weights_and_biases('pre_trained_weights.npy', 'pre_trained_biases.npy')
 
 # If you did not train, you will need to assign values to the activation functions and epsilon value
 network.hidden_layer_activation_function = 'lr'
@@ -24,8 +24,8 @@ network.epsilon = 0.01
 
 # now you can test the network visually with the training set or
 # really test it with the test set
-network.test_network_visually(network.input_X)
+network.test_network_visually(network.input_X, network.input_Y)
 correctly_classified = network.test_network()
 
 # this just prints out the number classified out of the total number of images
-print(str(correctly_classified) + '/' + str(network.test_output_Y.shape[1]))
+print('Correctly classified in test set: ' + str(correctly_classified) + '/' + str(network.test_output_Y.shape[1]))
