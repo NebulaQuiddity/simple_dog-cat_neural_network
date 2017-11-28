@@ -5,19 +5,19 @@
 import feed_forward_neural_network as ffnn
 import load_mnist_data as lmnist
 
-# load in the data from files (NOTE, YOU WILL NEED TO CREATE THIS DATA FIRST!)
-trx, tr_y, tex, tey = lmnist.load_data_from_files(('ffnn_numpy_data/X_train.npy', 'ffnn_numpy_data/Y_train.npy',
-                                                   'ffnn_numpy_data/X_test.npy', 'ffnn_numpy_data/Y_test.npy'))
+# load in the data from files (NOTE: YOU WILL NEED TO CREATE THIS DATA FIRST (see README for instructions!))
+trx, tr_y, tex, tey = lmnist.load_data_from_files(('X_training_data.npy', 'Y_training_data.npy',
+                                                   'X_test_data.npy', 'Y_test_data.npy'))
 
 # create an instance of a neural network
-network = ffnn.FeedForwardNeuralNetwork(trx, tr_y, tex, tey, [70, 30, 12, 10])
+network = ffnn.FeedForwardNeuralNetwork(trx, tr_y, tex, tey, ([network shape]))
 
 # if you have already created a model, you can load in the weights and biases
 # by using line 18. Otherwise, use line 17 to train the network
-# network.train(10000, 1, 0, 'lr', 's', 'weights.npy', 'biases.npy', (True, 50), epsilon=0.01)
+network.train(10000, 1, 0, 'lr', 's', 'weights_file_name.npy', 'biases_file_name.npy', (True, 50), epsilon=0.01)
 network.load_weights_and_biases('weights_new.npy', 'biases_new.npy')
 
-# also, I need to specify the hidden layer and output layer activation functions
+# If you did not train, you will need to assign values to the activation functions and epsilon value
 network.hidden_layer_activation_function = 'lr'
 network.output_layer_activation_function = 's'
 network.epsilon = 0.01
@@ -26,4 +26,6 @@ network.epsilon = 0.01
 # really test it with the test set
 network.test_network_visually(network.input_X)
 correctly_classified = network.test_network()
+
+# this just prints out the number classified out of the total number of images
 print(str(correctly_classified) + '/' + str(network.test_output_Y.shape[1]))
