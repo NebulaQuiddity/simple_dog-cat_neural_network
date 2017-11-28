@@ -3,7 +3,7 @@ This folder just contains the weights and biases from a network that I have prev
 
 ### Please also note that this network only performs with a 97.25% accuracy on the test set
 # Network information
-- Shape (Excluding input layer): [100, 50, 20, 10]
+- Shape (Excluding input layer): [300, 100, 50, 10]
 - Activation Functions:
   - Hidden layers: Leaky Relu
   - Output layer: Sigmoid
