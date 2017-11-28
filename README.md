@@ -35,9 +35,22 @@ This will create 4 .npy files that contain both the training and testing input a
 ```
 trx, tr_y, tex, tey = lmnist.load_data_from_files(('trx.npy', 'try.npy','tex.npy', 'tey.npy'))
 ```
+
 ### Viewing images
 If you are a bit impatient and want to check out some of the images, you can use 
 ```
 lmnist.show_mnist_images([image array])
 ```
 to view images in either the training or test set.
+
+# Creating a neural network
+This project makes creating a neural network simple and easy. All that you need to run is 
+```
+import feed_forward_neural_network as ffnn
+network = ffnn.FeedForwardNeuralNetwork(trx, tr_y, tex, tey, [network shape])
+```
+Network shape is the shape of your network without the input layer, since this can already be determined from the input data. For example, if you wanted to create a network with the shape [784 (input), 300, 100, 50, 10], network shape would be a tuple/list `(300, 100, 50, 10)`.
+
+# Classification
+## Training
+
