@@ -54,3 +54,12 @@ Network shape is the shape of your network without the input layer, since this c
 # Classification
 ## Training
 
+You can train the neural network by running 
+```
+network.train(batch_size, iterations, learning_rate, hidden_layer_activation_function, output_layer_activation_function, weights_file_name, biases_file_name, (True, 10), epsilon)
+```
+where:
+
+- `(True, 10)` indicates that the cost of the network should be printed every 10 iterations
+
+
