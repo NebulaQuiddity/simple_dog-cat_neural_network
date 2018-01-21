@@ -54,12 +54,47 @@ Network shape is the shape of your network without the input layer, since this c
 # Classification
 ## Training
 
-You can train the neural network by running 
+You can train the neural network by running:
 ```
 network.train(batch_size, iterations, learning_rate, hidden_layer_activation_function, output_layer_activation_function, weights_file_name, biases_file_name, (True, 10), epsilon)
 ```
 where:
-
+- `batch_size` is the batch size (duh)
+- `iterations` is the number of training iterations you want to run
+- `learning_rate` is the learning rate (duh again)
+- `hidden_layer_activation_function` and `output_layer_activation_function` are the activation functions that you want to use for the hidden and output layers. For example, `'lr', 's'` would mean that the hidden layers of the neural network will use the leaky relu activation function and the output layer will use the sigmoid activation function.
+- `weights_file_name` and `biases_file_name` are the names of the files where the weights and biases of this network will be saved (and thus they should end in '.npy')
 - `(True, 10)` indicates that the cost of the network should be printed every 10 iterations
+- `epsilon` is the epsilon for the leaky relu activation function (leave as `None` if you don't use leaky relu)
 
 
+## Testing
+### Visual Testing Over\ the Training Set
+One way that you can visually look for errors in your neural network is by observing the images that it classifies correctly and incorrectly. This projects allows you to observe visually observe the images that your network messes up on in the training set (! note that some models may overfit the data so that they classify virtually every image in the training set correctly, though they may still mess up in the test set).
+
+You can test the network visually by running:
+ ```
+ network.test_network_visually(network.input_X, network.output_Y)
+ ```
+<p>
+  <img src="https://user-images.githubusercontent.com/29058151/35200222-5ef1968c-fec7-11e7-9b46-280cbd5ff38e.png"
+       </p>
+
+### Testing on the Test Set
+In order to properly measure the accuracy of your model, you can use the test set (which the model has never 'seen'). To do this, run:
+```
+correctly_classified = network.test_network()
+```
+## Loading a Previously Trained Network
+### Loading Weights and Biases
+In order to load weights and biases from a previous model, run:
+```
+network.load_weights_and_biases('weights.npy', 'biases.npy')
+```
+### Setting Other Parameters
+The network doesn't save your parameters, so you will need to change them manually. For example:
+```
+network.hidden_layer_activation_function = 'lr'
+network.output_layer_activation_function = 's'
+network.epsilon = 0.01
+```
