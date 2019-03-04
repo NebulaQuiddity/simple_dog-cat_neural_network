@@ -2,13 +2,6 @@
   <img src="https://user-images.githubusercontent.com/29058151/33108998-5f20e9a0-cefc-11e7-9a40-2c9148f7ff6c.png" width=700/>
 </p>
 
-[![YouTube](https://img.shields.io/badge/YouTube-tfs%20home-red.svg)](http:youtube.com/thingsfromspace)
-[![Twitter](https://img.shields.io/badge/Twitter-%40tfs__space-blue.svg)](http://twitter.com/tfs_space)
-[![Discord chat](https://img.shields.io/badge/Discord-discuss%20tfs%20%E2%86%92-orange.svg)](https://discord.gg/k4hu5G9)
-[![Vimeo](https://img.shields.io/badge/Vimeo-more%20vids-brightgreen.svg)](https://vimeo.com/thingsfromspace)
-[![Instagram](https://img.shields.io/badge/Instagram-%40things__from__space-lightgrey.svg)](https://www.instagram.com/things_from_space/)
-[![Vidme](https://img.shields.io/badge/Vidme-the%20video%20alternative-yellow.svg)](https://vid.me/things_from_space)
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/29058151/33245815-03bd877c-d2ca-11e7-9330-56fd6ee04449.png" width=700/>
 </p>
